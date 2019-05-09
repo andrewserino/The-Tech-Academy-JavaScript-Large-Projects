@@ -117,12 +117,12 @@
 
             // Cheese
 
-            function getCheese(runningTotal,text1)
+            function getCheese(runningTotal,text1) {
                 var cheeseTotal = 0;
 	            var selectedCheese = [];
                 var cheeseArray = document.getElementsByClassName("cheese");
                 for (var j = 0; j < cheeseArray.length; j++) {
-		            if (meatCheese[j].checked) {
+		            if (cheeseArray[j].checked) {
 		            	selectedCheese.push(cheeseArray[j].value);
 			            console.log("selected cheese item: ("+cheeseArray[j].value+")");
 			            text1 = text1+cheeseArray[j].value+"<br>";
@@ -145,7 +145,7 @@
 
             // Sauce
 
-            function getSauce(runningTotal,text1)
+            function getSauce(runningTotal,text1) {
                 var sauceTotal = 0;
 	            var selectedSauce = [];
                 var cheeseSauce = document.getElementsByClassName("sauce");
@@ -153,7 +153,8 @@
 		            if (sauceArray[j].checked) {
 		            	selectedSauce.push(sauceArray[j].value);
 			            console.log("selected sauce item: ("+sauceArray[j].value+")");
-			            text1 = text1+sauceArray[j].value+"<br>";
+						text1 = text1+sauceArray[j].value+"<br>";
+					}
 		        }
 	        }
 	        runningTotal = (runningTotal + sauceTotal);
